@@ -5,7 +5,7 @@ import { db } from "../../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
-import { Image } from 'next/image';
+import  Image  from 'next/image';
 
 interface Highlight {
     id: string;
