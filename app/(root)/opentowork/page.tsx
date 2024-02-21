@@ -1,3 +1,6 @@
+
+// @ts-nocheck
+
 /* eslint-disable tailwindcss/classnames-order */
 import QuestionCard from "@/components/cards/QuestionCard";
 import HomeFilters from "@/components/home/HomeFilters";

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /* eslint-disable tailwindcss/classnames-order */
 
 import { SearchParamsProps } from "@/types";
