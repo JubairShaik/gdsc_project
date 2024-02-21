@@ -32,28 +32,25 @@ const Todayspick = () => {
 
   return (
     <div>
-      <div className="my-20 py-20">
-        <h1 className="text-5xl font-bold">Todays Favourite</h1>
-        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.map((item, index) => (
-            <Link href={`/highlight/${item.name}`}
-            key={item.name}
-            
-            >
-              <div
-                style={{ backgroundColor: `${item.bg}` }}
-                className=" h-52 rounded-xl p-5 text-2xl font-bold text-white transition-all hover:scale-105"
-              >
-                <h1 className="mt-32 flex items-center gap-1">
-                  {item.name}
-                  <IoIosArrowForward className="mt-1 text-lg" />
-                </h1>
-
-              </div>
-            </Link>
-          ))}
+     <div className="my-20 py-20">
+  <h1 className="text-5xl font-bold">Todays Favorites</h1>
+  <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    {data.map((item) => (
+      <Link key={item.name} href={`/highlight/${item.name}`}>
+        <div
+          className="h-52 rounded-xl p-5 text-2xl font-bold text-white transition-all hover:scale-105"
+          style={{ backgroundColor: item.bg }}
+        >
+          <h2 className="mt-32 flex items-center gap-1">
+            {item.name}
+            <IoIosArrowForward className="mt-1 text-lg" />
+          </h2>
         </div>
-      </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
     </div>
   );
 };
