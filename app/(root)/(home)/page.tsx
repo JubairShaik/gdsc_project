@@ -2,11 +2,10 @@
 
 import { SearchParamsProps } from "@/types";
 import Testimonials from "@/components/Carousel";
-import Top from "@/components/Top";
+// import Top from "@/components/Top";
 
 import Link from 'next/link';
-import { FaUserTie } from "react-icons/fa6";
-import { FaUserGraduate } from "react-icons/fa6";
+import { FaUserTie , FaUserGraduate } from "react-icons/fa6";
 import Todayspick from "@/components/Todayspick";
 import type { Metadata } from "next";
 // import Todayspick from '@/components/shared/Todayspick';
