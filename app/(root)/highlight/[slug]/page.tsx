@@ -52,8 +52,8 @@ const Home: React.FC = () => {
             </div>
             {item?.imgurl && (
                 <Image 
-                width={20}
-                height = {20}
+                width={400}
+                height = {400}
                 src={item.imgurl} alt="Freelancer's work"
                  className="mt-3 aspect-video w-full rounded-lg" />
             )}
