@@ -1,0 +1,38 @@
+/* styles.module.css */
+
+ 
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+.customstyles {
+  @apply custom-scrollbar sticky right-0 top-0 m-5
+    h-screen w-[340px] flex-col overflow-y-auto rounded-[20px]
+      pt-[6rem]  dark:shadow-none pl-1   max-xl:hidden;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+ 
