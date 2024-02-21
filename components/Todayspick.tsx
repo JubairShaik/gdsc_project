@@ -32,19 +32,21 @@ const Todayspick = () => {
 
   return (
     <div>
-      <div className="py-20 my-20">
-        <h1 className="text-5xl font-bold">Today's Favourite</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-16">
+      <div className="my-20 py-20">
+        <h1 className="text-5xl font-bold">Todays Favourite</h1>
+        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {data.map((item, index) => (
-            <Link href={`/highlight/${item.name}`}>
+            <Link href={`/highlight/${item.name}`}
+            key={item.name}
+            
+            >
               <div
-                key={index}
                 style={{ backgroundColor: `${item.bg}` }}
-                className="rounded-xl h-52 text-white font-bold text-2xl p-5 hover:scale-105 transition-all main-class"
+                className=" h-52 rounded-xl p-5 text-2xl font-bold text-white transition-all hover:scale-105"
               >
                 <h1 className="mt-32 flex items-center gap-1">
                   {item.name}
-                  <IoIosArrowForward className="text-lg mt-1" />
+                  <IoIosArrowForward className="mt-1 text-lg" />
                 </h1>
 
               </div>
