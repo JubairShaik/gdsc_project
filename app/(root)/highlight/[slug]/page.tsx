@@ -5,6 +5,7 @@ import { db } from "../../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
+import { Image } from 'next/image';
 
 interface Highlight {
     id: string;
@@ -36,20 +37,30 @@ const Home: React.FC = () => {
 
     return (
         <main className="p-5 md:p-0">
-            {userdata.map((item) => (
-                <div className="flex flex-col">
-                    <div className=" flex items-start justify-between">
-                        <div>
-                            <h1 className=" font-bold text-2xl ">Freelancer : <span className="text-green-600  uppercase">{item?.owner}</span></h1>
-                            <h1 className=" text-md fontbold opacity-70">{item?.category}</h1>
-                        </div>
-                        <Link href={item?.livePreview} className="text-lg font-bold mt-1 bg-green-500 text-white px-4 py-2 rounded-md">Visit my work</Link>
-                    </div>
-                    <img src={item?.imgurl} className="mt-3 w-12/12 aspect-video rounded-lg" />
-
+    {userdata.map((item) => (
+        <div key={item.id} className="flex flex-col">
+            <div className="flex items-start justify-between">
+                <div>
+                    <h1 className="text-2xl font-bold">Freelancer: <span className="uppercase text-green-600">{item?.owner}</span></h1>
+                    <h1 className="text-md font-bold opacity-70">{item?.category}</h1>
                 </div>
-            ))}
-        </main>
+                {item?.livePreview && (
+                    <Link href={item.livePreview} passHref>
+                        <a className="mt-1 rounded-md bg-green-500 px-4 py-2 text-lg font-bold text-white">Visit my work</a>
+                    </Link>
+                )}
+            </div>
+            {item?.imgurl && (
+                <Image 
+                width={20}
+                height = {20}
+                src={item.imgurl} alt="Freelancer's work"
+                 className="mt-3 aspect-video w-full rounded-lg" />
+            )}
+        </div>
+    ))}
+</main>
+
     );
 };
 
