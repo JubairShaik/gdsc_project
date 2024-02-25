@@ -1,5 +1,10 @@
 FOR FREELANCERS
 # insync
-# gdsc1
-# gdsc1
-# gdsc_project
+
+steps to run locally !
+
+git clone <repo_name>
+
+npm install 
+
+npm run dev
